@@ -1,38 +1,216 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Merkazi', sans-serif;
+  font-weight: 600;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER */
+
+header {
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.headerContainer {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin: 1em;
+
+}
+
+/* Define the animation */
+@keyframes navLinkHover {
+  0% {
+    width: 0;
+    margin-left: 50%; /* Start from the center */
+  }
+  100% {
+    width: 100%;
+    margin-left: 0; /* Cover the entire text */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Apply the animation to the navigation links */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  position: relative; /* Needed for absolute positioning of pseudo-element */
+  padding-bottom: 10px;
+}
+
+/* Create the pseudo-element for the underline */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Start from the left edge of the text */
+  width: 100%; /* Initially full width */
+  height: 2px; /* Thickness of the underline */
+  background-color: black;
+  transition: width 0.3s ease, margin-left 0.3s ease; /* Animate width and position */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: center bottom; /* Set the transform origin to center bottom */
+}
+
+/* Apply the animation on hover */
+nav ul li a:hover::after {
+  animation: navLinkHover 0.3s ease forwards; /* Apply the animation */
+  transform: scaleX(1); /* Reveal the underline */
+}
+
+
+/* HERO */
+
+.hero {
+  height: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #495E57;
+}
+
+.heroContainer {
+  width: 850px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroLeftPart {
+  width: 300px;
+  color: white;
+  font-size: 18px;
+  font-family: "Karla";
+}
+
+.heroLeftPart h1 {
+  color: #F4CE14;
+  font-size: 40px;
+  margin: 0em;
+}
+
+.heroLeftPart p {
+margin: 30px 0;
+}
+
+.heroLeftPart h3 {
+  font-size: 30px;
+  margin: 0em;
+}
+
+.heroImage {
+  width: 350px;
+  height: 400px;
+  border-radius: 16px;
+  position: absolute;
+  object-fit:cover;
+  top:18%;
+  left:54%;
+}
+
+
+/* HIGHLIGHTS */
+
+.highlights {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.highlightsContainer {
+  width: 850px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4CE14;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEFEE;
+}
+
+/* ABOUT */
+
+.about {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #495E57;
+}
+
+/* BUTTONS */
+
+.reserveTableButton {
+  background-color: #F4CE14;
+  border-radius: 8px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 35px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.reserveTableButton:active {
+  background-color: #333333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.onlineMenuButton {
+  background-color: #F4CE14;
+  border-radius: 8px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 35px;
+  border-style: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.onlineMenuButton:active {
+  background-color: #333333;
+  color: white;
 }
+
