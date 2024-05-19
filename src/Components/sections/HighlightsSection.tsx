@@ -2,7 +2,7 @@ import OnlineMenuButton from "../buttons/OnlineMenuButton"
 import greekSaladImage from "../../assets/greek_salad.jpg"
 import bruchettaImage from "../../assets/bruchetta.svg"
 import lemonDessertImage from "../../assets/lemon_dessert.jpg"
-import MenuCard from "../../Components/cards/MenuCard"
+import MenuCard from "../../components/cards/MenuCard"
 
 
 export default function HighlightsSection() {
