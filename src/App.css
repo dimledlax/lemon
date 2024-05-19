@@ -179,7 +179,6 @@ nav ul li a:hover::after {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-top: 40px;
 }
 
 .highlightsItems {
@@ -422,8 +421,15 @@ footer {
   margin: 10px;
 }
 
+.footerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
 .footerLogo img {
-  height: 300px;
+  height: 200px;
 }
 
 .footerNav ul, .footerNav a, .footerRight p{
