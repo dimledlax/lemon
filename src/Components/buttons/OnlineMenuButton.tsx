@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function OnlineMenuButton() {
   return (
     <>
-      <button className="onlineMenuButton">Online Menu</button>
+      <Link to={`/menu`}>
+        <button className="onlineMenuButton">Online Menu</button>
+      </Link>
     </>
   )
 }

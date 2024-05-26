@@ -13,3 +13,19 @@ export interface TestimonialsCardProps {
     nickname: string,
     review: string
 }
+
+export interface MenuItem {
+  id: string;
+  name: string;
+  image: JSX.Element;
+  price: string;
+  description: string;
+}
+
+export interface MenuContextProps {
+  menu: MenuItem[];
+}
+
+export interface MenuProviderProps {
+  children: ReactNode;
+}

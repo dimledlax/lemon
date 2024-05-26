@@ -17,7 +17,7 @@ h3 {
 }
 
 h4 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -177,8 +177,9 @@ nav ul li a:hover::after {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-right: 2em;
 }
 
 .highlightsItems {
@@ -432,6 +433,10 @@ footer {
   height: 200px;
 }
 
+.footerContacts p {
+  line-height: 1.5;
+}
+
 .footerNav ul, .footerNav a, .footerRight p{
   margin: 0;
   padding: 0;
@@ -443,6 +448,104 @@ footer {
 
 .footerNav li {
   margin: 5px 0;
+}
+
+.footerRight h4 {
+  font-weight: 800;
+}
+
+/* RESERVE TABLE  */
+
+.reserveTable {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+}
+
+.reserveTableContainer {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 8em 0 12em 0;
+}
+
+.reserveTableContainer h1 {
+  margin: 0 0 80px 0;
+}
+
+.reserveTableContainer input,
+.reserveTableContainer select {
+  font-family: 'Karla', 'Merkazi', sans-serif;
+  font-size: 16px;
+  color: #495E57;
+  background-color: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 35px;
+  border-style: solid;
+  border-width: 1px;
+}
+.reserveTableContainer input::placeholder,
+.reserveTableContainer select::placeholder {
+  color: #495e57b0;
+
+}
+
+fieldset {
+  padding: 1em;
+  background-color: white;
+  border: none;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.field > div {
+  margin: 1em; /* Add space between form groups */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form {
+  background-color: white;
+  min-height: 300px;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* MENU PAGE */
+
+.menuPageContainer {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 70px 0;
+}
+
+.menuTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
@@ -459,10 +562,34 @@ footer {
   cursor: pointer;
 }
 
+.bookButton {
+  background-color: #F4CE14;
+  border-radius: 8px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 35px;
+  border-style: none;
+  cursor: pointer;
+  max-width: 7em;
+}
+.bookButton:active {
+  background-color: #333333;
+  color: white;
+}
+
+.bookButton:disabled {
+  background-color: #F5F5F5;
+  color: black;
+  cursor: default;
+}
+
+
 .reserveTableButton:active {
   background-color: #333333;
   color: white;
 }
+
 
 .onlineMenuButton {
   background-color: #F4CE14;
