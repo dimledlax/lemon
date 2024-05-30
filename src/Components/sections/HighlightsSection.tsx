@@ -1,5 +1,5 @@
 import OnlineMenuButton from "../buttons/OnlineMenuButton"
-import MenuCard from "../../components/cards/MenuCard"
+import MenuCard from "../cards/MenuCard"
 import { useMenu } from "../context/MenuContext"
 
 

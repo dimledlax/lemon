@@ -29,3 +29,9 @@ export interface MenuContextProps {
 export interface MenuProviderProps {
   children: ReactNode;
 }
+
+export interface BookingFormProps {
+  availableTimes: string[];
+  updateTimes: (arg0: string) => void
+  initializeTimes: () => void
+}

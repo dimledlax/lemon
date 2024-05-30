@@ -1,4 +1,3 @@
-import HighlightsSection from "../sections/HighlightsSection";
 import MenuCard from "../cards/MenuCard";
 import { useMenu } from "../context/MenuContext"
 

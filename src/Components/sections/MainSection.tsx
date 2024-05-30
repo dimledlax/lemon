@@ -1,7 +1,7 @@
-import HeroSection from "../sections/HeroSection"
-import HighlightsSection from "../sections/HighlightsSection"
-import TestimonialsSection from "../sections/TestimonialsSection"
-import AboutSection from "../sections/AboutSection"
+import HeroSection from "./HeroSection"
+import HighlightsSection from "./HighlightsSection"
+import TestimonialsSection from "./TestimonialsSection"
+import AboutSection from "./AboutSection"
 
 export default function MainSection() {
   return (
