@@ -2,7 +2,7 @@ import { useState, FormEvent, ChangeEvent } from "react";
 import { BookingFormProps } from "../../models"
 
 
-export default function BookingForm({ availableTimes, updateTimes, initializeTimes }: BookingFormProps) {
+export default function BookingForm({ availableTimes, updateTimes }: BookingFormProps) {
   const [booking, setBooking] = useState({
     name: "",
     guests: "",
@@ -125,7 +125,6 @@ export default function BookingForm({ availableTimes, updateTimes, initializeTim
             </div>
           </fieldset>
         </form>
-        <button onClick={initializeTimes}>Reset</button>
       </div>
     </div>
   );

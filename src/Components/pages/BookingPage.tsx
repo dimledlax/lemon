@@ -1,6 +1,5 @@
-import { useReducer } from "react";
+import { Reducer, useReducer, useEffect } from "react";
 import BookingForm from "../forms/BookingForm";
-import { Reducer } from "react";
 
 const reducer: Reducer<typeof initialState, { type: string }> = (state, action) => {
   switch (action.type) {
@@ -11,9 +10,6 @@ const reducer: Reducer<typeof initialState, { type: string }> = (state, action) 
     case "21:00":
     case "22:00":
       return state.filter((time) => time !== action.type);
-
-    case "reset":
-      return initialState;
 
     default:
       return state;
@@ -29,6 +25,14 @@ const initialState = [
   "22:00"
 ];
 
+useEffect(() => {
+  initializeTimes();
+})
+
+const initializeTimes = () => {
+  // fetchAPI(date)
+}
+
 export default function BookingPage() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -36,13 +40,10 @@ export default function BookingPage() {
     dispatch({ type: time });
   };
 
-  const initializeTimes = () => {
-    dispatch({ type: "reset" });
-  }
-
   return (
     <>
-      <BookingForm availableTimes={state} updateTimes={updateTimes} initializeTimes={initializeTimes}/>
+      <BookingForm availableTimes={state} updateTimes={updateTimes}/>
     </>
   );
 }
+
