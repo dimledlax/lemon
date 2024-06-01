@@ -3,6 +3,7 @@ import { BookingFormProps } from "../../models"
 
 
 export default function BookingForm({ availableTimes, updateTimes }: BookingFormProps) {
+
   const [booking, setBooking] = useState({
     name: "",
     guests: "",
@@ -15,7 +16,7 @@ export default function BookingForm({ availableTimes, updateTimes }: BookingForm
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updateTimes(booking.time)
+    updateTimes(booking.time, booking.date)
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -120,7 +121,9 @@ export default function BookingForm({ availableTimes, updateTimes }: BookingForm
                 </select>
               </div>
               <div>
-                <button disabled={!isFormValid()} type="submit" value="Book" className="bookButton">Book</button>
+                <button disabled={!isFormValid()} type="submit"
+                value="Book" className="bookButton"
+                >Book</button>
               </div>
             </div>
           </fieldset>
