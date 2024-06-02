@@ -33,4 +33,9 @@ export interface MenuProviderProps {
 export interface BookingFormProps {
   availableTimes: string[];
   updateTimes: (arg0: string, arg1: string) => void
+  onDateChange: (date: string) => void;
+}
+
+export interface BookingState {
+  [date: string]: string[];
 }

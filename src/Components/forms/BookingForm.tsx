@@ -1,8 +1,8 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent, ChangeEvent, useEffect } from "react";
 import { BookingFormProps } from "../../models"
 
 
-export default function BookingForm({ availableTimes, updateTimes }: BookingFormProps) {
+export default function BookingForm({ availableTimes, updateTimes, onDateChange }: BookingFormProps) {
 
   const [booking, setBooking] = useState({
     name: "",
@@ -13,10 +13,13 @@ export default function BookingForm({ availableTimes, updateTimes }: BookingForm
     email: ""
   });
 
+  useEffect(() => {
+    onDateChange(booking.date);
+  }, [booking.date, onDateChange]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updateTimes(booking.time, booking.date)
+    updateTimes(booking.time, booking.date);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -103,7 +106,7 @@ export default function BookingForm({ availableTimes, updateTimes }: BookingForm
                     <option key={time} value={time}>
                       {time}
                     </option>
-                    ))}
+                  ))}
                 </select>
               </div>
 
