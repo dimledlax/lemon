@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <div className="highlights">
         <div className="menuPageContainer">
-          <div className="menuTitle">
+          <div className="menuPageTitle">
             <h1>Menu</h1>
           </div>
           <div className="highlightsItems">

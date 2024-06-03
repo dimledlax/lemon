@@ -91,8 +91,8 @@ nav ul li a::after {
 
 /* Apply the animation on hover */
 nav ul li a:hover::after {
-  animation: navLinkHover 0.3s ease forwards; /* Apply the animation */
-  transform: scaleX(1); /* Reveal the underline */
+  animation: navLinkHover 0.3s ease forwards;
+  transform: scaleX(1);
 }
 
 
@@ -542,11 +542,78 @@ select {
   margin: 70px 0;
 }
 
-.menuTitle {
+.menuPageTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
+.menuTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmationPage {
+  min-height: 320px;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+}
+
+.confirmationContainer {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  margin: 3em 0 8em 0;
+}
+
+.confirmationContainer h3 {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.confirmationContainer fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  width: auto;
+}
+
+.confirmationContainer fieldset > * {
+  margin: 1em;
+}
+
+.confirmationContainer fieldset label {
+  font-size: 1.3em;
+  margin-right: 1em;
+}
+
+.rateField {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1em 0 1em;
+}
+
+/* .rateForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: end;
+  width: 40em;
+} */
+
 
 
 /* BUTTONS */

@@ -6,6 +6,7 @@ import HeaderSection from "./components/sections/HeaderSection"
 import AboutPage from "./components/pages/AboutPage"
 import Footer from "./components/sections/FooterSection"
 import ReserveTablePage from "./components/pages/BookingPage";
+import ConfirmedBookingPage from "./components/pages/ConfirmedBookingPage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/menu" element={<MenuPage />}/>
           <Route path="/reservations" element={<ReserveTablePage />}/>
           <Route path="/about" element={<AboutPage />}/>
+          <Route path="/confirmation" element={<ConfirmedBookingPage />}/>
         </Routes>
       <Footer />
     </>

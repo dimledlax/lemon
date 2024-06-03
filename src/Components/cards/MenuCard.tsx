@@ -11,7 +11,7 @@ export default function MenuCard({ name, image, price, description }: MenuCardPr
           <span>{price}</span>
         </div>
         <p>{description}</p>
-        <h4>Order delivery</h4>
+        <h4>Order delivery 🛵</h4>
       </div>
 
     </div>

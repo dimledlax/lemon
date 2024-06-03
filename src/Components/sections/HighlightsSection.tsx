@@ -15,8 +15,8 @@ export default function HighlightsSection() {
         </div>
         <div className="highlightsItems">
           {
-            menu.map((item) => (
-              <MenuCard key={item.id} {...item}/>
+            menu.slice(0, 3).map((item) => (
+              <MenuCard key={item.id} {...item} />
             ))
           }
         </div>

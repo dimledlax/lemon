@@ -30,10 +30,20 @@ export interface MenuProviderProps {
   children: ReactNode;
 }
 
+export interface FormData {
+    name: string,
+    guests: string,
+    date: string,
+    time: string,
+    occasion: string,
+    email: string
+}
+
 export interface BookingFormProps {
   availableTimes: string[];
-  updateTimes: (arg0: string, arg1: string) => void
-  onDateChange: (date: string) => void;
+  setSelectedDate: (date: string) => void;
+  updateTimes: (arg0: string, arg1: string) => void;
+  submitForm: (formData: FormData) => void
 }
 
 export interface BookingState {
