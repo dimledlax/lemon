@@ -41,6 +41,8 @@ export default function BookingForm({ availableTimes, updateTimes, setSelectedDa
     );
   }
 
+  const today = new Date().toISOString().split('T')[0];
+
   return (
     <div className="reserveTable">
       <div className="reserveTableContainer">
@@ -56,6 +58,7 @@ export default function BookingForm({ availableTimes, updateTimes, setSelectedDa
                   name="name"
                   value={booking.name}
                   onChange={handleChange}
+                  minLength={2}
                 />
               </div>
 
@@ -90,6 +93,7 @@ export default function BookingForm({ availableTimes, updateTimes, setSelectedDa
                   type="date"
                   name="date"
                   value={booking.date}
+                  min={today}
                   onChange={handleChange}
                 />
               </div>
@@ -100,6 +104,7 @@ export default function BookingForm({ availableTimes, updateTimes, setSelectedDa
                   id="time"
                   value={booking.time}
                   onChange={handleChange}
+                  required
                 >
                   <option value="">Time</option>
                   {availableTimes.map((time) => (

@@ -2,6 +2,7 @@ import LogoGreen from "../../assets/Logo_green.png"
 import Instagram from "../../assets/instagram.png"
 import YouTube from "../../assets/youtube.png"
 import Facebook from "../../assets/facebook.png"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
   return (
@@ -16,12 +17,11 @@ export default function Footer() {
           <div className="footerNav">
             <h4>Navigation</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Reservations</a></li>
-              <li><a href="#">Order Online</a></li>
-              <li><a href="#">Login</a></li>
-              <li><a href="#">About</a></li>
+              <li><Link to={`/`}>Home</Link></li>
+              <li><Link to={`/menu`}>Menu</Link></li>
+              <li><Link to={`/reservations`}>Reservations</Link></li>
+              <li><Link to={`/menu`}>Order Online</Link></li>
+              <li><Link to={`/about`}>About</Link></li>
             </ul>
             </div>
           <div className="footerContacts">
@@ -32,9 +32,9 @@ export default function Footer() {
           <div className="footerSocial">
             <h4>Social Media Links</h4>
               <div>
-                <img src={Instagram} alt="Instagram" />
-                <img src={Facebook} alt="Facebook" />
-                <img src={YouTube} alt="YouTube" />
+                <a href="https://www.instagram.com/" target="_blank"><img src={Instagram} alt="Instagram" /></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src={Facebook} alt="Facebook" /></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src={YouTube} alt="YouTube" /></a>
               </div>
             </div>
         </div>
