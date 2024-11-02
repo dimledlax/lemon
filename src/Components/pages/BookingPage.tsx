@@ -29,6 +29,7 @@ export default function BookingPage() {
 
   const getAvailableTimes = (state: BookingState, date: string): string[] => {
     const allTimes = [
+      "16:00",
       "17:00",
       "18:00",
       "19:00",
